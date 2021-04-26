@@ -30,9 +30,9 @@ plt.xlabel("Custo do filme $")
 plt.ylabel("Receita Global $")
 
 
-#Definindo os limites como o maior valor de cada tabela
-plt.xlim(0, int(colunas["x"].max()))
-plt.ylim(0, int(colunas["y"].max()))
+#Definindo os limites do grafico
+plt.xlim(0, 4.5 * (10**8))
+plt.ylim(0, (3 * (10**9)))
 
 plt.show()
 

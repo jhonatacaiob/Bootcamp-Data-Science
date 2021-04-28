@@ -15,7 +15,6 @@ score = dados[["Avg_Math_Test_Score"]]
 
 
 plt.plot(time, LSD, c = "red", linewidth = 4)
-plt.style.use("fivethirtyeight")
 
 plt.xlim(0, 500)
 plt.ylim(1,7)

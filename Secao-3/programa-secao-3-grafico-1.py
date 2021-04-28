@@ -1,7 +1,6 @@
 import pandas as pd
 from pandas import DataFrame as df
 import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
 
 
 #Lendo o arquivo

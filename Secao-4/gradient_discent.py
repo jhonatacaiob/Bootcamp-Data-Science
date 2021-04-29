@@ -18,6 +18,6 @@ plt.xlabel("x")
 plt.ylabel("f(x)")
 
 plt.plot(x_1, f(x_1))
-plt.show()
+plt.savefig("Aula 03.jpg")
 
 

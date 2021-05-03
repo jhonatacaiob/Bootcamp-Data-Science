@@ -24,7 +24,6 @@ for i in range(50000):
     x_anterior = x_novo
     gradiente = df(x_anterior)
     x_novo = x_anterior - gradiente * taxa_de_aprendizado
-    print(i, x_anterior, "-", gradiente * taxa_de_aprendizado, "=", x_novo)
     if(abs(x_anterior - x_novo) < precisao):
         print("Numero de tentativas:", i)
         break
@@ -79,10 +78,6 @@ plt.scatter(x_novos, df(x_novos), color = "red", s = 100, alpha = 0.6)
 
 
 
-
-
-
-
 plt.subplot(1, 3, 3)
 plt.title("Gradiente (Zoom)")
 plt.xlim(-0.55, 0.2)
@@ -100,4 +95,4 @@ plt.scatter(x_novos, df(x_novos), color = "red", s = 100, alpha = 0.6)
 
 
 #plt.show()
-plt.savefig("Aula 05.jpg")
+#plt.savefig("Aula 05.jpg")

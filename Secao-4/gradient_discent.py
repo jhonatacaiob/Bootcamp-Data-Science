@@ -24,6 +24,7 @@ for i in range(50000):
     x_anterior = x_novo
     gradiente = df(x_anterior)
     x_novo = x_anterior - gradiente * taxa_de_aprendizado
+    print(i, x_anterior, "-", gradiente * taxa_de_aprendizado, "=", x_novo)
     if(abs(x_anterior - x_novo) < precisao):
         print("Numero de tentativas:", i)
         break
@@ -46,10 +47,10 @@ x_novos = np.array(x_novos)
 
 
 
-plt.figure(figsize=[15,5])
+plt.figure(figsize=[20,5])
 
 
-plt.subplot(1,2,1)
+plt.subplot(1, 3, 1)
 plt.title("Função de custo")
 plt.xlim(-3, 3)
 plt.ylim(0, 8)
@@ -64,7 +65,7 @@ plt.scatter(x_novos, f(x_novos), color = "red", s = 100, alpha = 0.6)
 
 
 
-plt.subplot(1,2,2)
+plt.subplot(1, 3, 2)
 plt.title("Derivada da funçao de custo")
 plt.xlim(-2, 3)
 plt.ylim(-3, 6)
@@ -79,5 +80,24 @@ plt.scatter(x_novos, df(x_novos), color = "red", s = 100, alpha = 0.6)
 
 
 
-plt.show()
-#plt.savefig("Aula 04.jpg")
+
+
+
+plt.subplot(1, 3, 3)
+plt.title("Gradiente (Zoom)")
+plt.xlim(-0.55, 0.2)
+plt.ylim(-0.3, 0.8)
+plt.grid("True")
+
+plt.xlabel("x")
+plt.ylabel("df(x)")
+
+plt.plot(x, df(x), color = "skyblue", linewidth = 5, alpha = 0.8)
+plt.scatter(x_novos, df(x_novos), color = "red", s = 100, alpha = 0.6)
+
+
+
+
+
+#plt.show()
+plt.savefig("Aula 05.jpg")

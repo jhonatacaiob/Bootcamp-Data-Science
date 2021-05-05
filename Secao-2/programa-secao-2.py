@@ -15,13 +15,13 @@ colunas = {"X": df(dados[dados.columns[0]]),
 
 #Definindo os valores da regressão linear
 regressao = LinearRegression()
-regressao.fit(colunas["X"], colunas["y"])
-predicao = regressao.predict(colunas["X"])
+regressao.fit(df(dados['production_budget_usd']), df(dados['worldwide_gross_usd']))
+predicao = regressao.predict(df(dados['production_budget_usd']))
 
 
 #criando o grafico
 plt.scatter(dados[dados.columns[0]], dados[dados.columns[1]], alpha = 0.3)
-plt.plot(colunas["X"], predicao, linewidth = 4, color = "red")
+plt.plot(dados['production_budget_usd'], predicao, linewidth = 4, color = "red")
 
 
 #formatando o grafico
